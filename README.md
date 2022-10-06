@@ -7,7 +7,7 @@ Windows X86 & X64 static library for manual mapping of arbitrary dll payloads fr
 
 ### Implemented Features
 
-- [ ] C++ Exceptions
+- [ ] C++ and SEH Exceptions
 - [ ] TLS callbacks
 - [ ] Static TLS
 - [ ] Relocs
