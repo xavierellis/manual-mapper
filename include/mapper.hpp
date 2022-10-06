@@ -1,6 +1,6 @@
 #pragma once
 #ifndef MAPPER_API //defined by mapper_internal if compiling the implementation
-#define MAPPER_API __declspec(dllexport) __stdcall
+#define MAPPER_API __declspec(dllimport) __stdcall
 #endif
 
 #include <cstdint>
