@@ -1,7 +1,7 @@
 # manual-mapper
 
 
-Windows X86 & X64 static library for manual mapping of arbitrary dll payloads from disk and memory.
+Usermode Windows X86 & X64 static library for manual mapping of arbitrary dll payloads from disk and memory.
 
 © Xavier Ellis 2022; for educational purposes ONLY
 
