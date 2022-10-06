@@ -3,8 +3,6 @@
 
 Usermode Windows X86 & X64 static library for manual mapping of arbitrary dll payloads from disk and memory.
 
-© Xavier Ellis 2022; for educational purposes ONLY
-
 ### Implemented Features
 
 - [ ] C++ and SEH Exceptions
@@ -17,3 +15,5 @@ Usermode Windows X86 & X64 static library for manual mapping of arbitrary dll pa
 - [ ] Security cookie initialization
 - [ ] Unloading
 
+
+© Xavier Ellis 2022; for educational purposes ONLY
