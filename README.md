@@ -3,7 +3,7 @@
 
 Windows X86 & X64 static library for manual mapping of arbitrary dll payloads from disk and memory.
 
-© Xavier Ellis; for educational purposes ONLY
+© Xavier Ellis 2022; for educational purposes ONLY
 
 ### Implemented Features
 
