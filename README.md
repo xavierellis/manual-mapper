@@ -3,6 +3,8 @@
 
 Windows X86 & X64 static library for manual mapping of arbitrary dll payloads from disk and memory.
 
+© Xavier Ellis, For educational purposes ONLY
+
 ### Implemented Features
 
 - [ ] C++ Exceptions
