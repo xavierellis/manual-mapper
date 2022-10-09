@@ -1,11 +1,11 @@
 # manual-mapper
 
 
-Windows X86 & X64 static library for manual mapping of arbitrary dll payloads from disk and memory.
+Usermode Windows X86 & X64 static library for manual mapping of arbitrary dll payloads from disk and memory.
 
 ### Implemented Features
 
-- [ ] C++ Exceptions
+- [ ] C++ and SEH Exceptions
 - [ ] TLS callbacks
 - [ ] Static TLS
 - [ ] Relocs
@@ -15,3 +15,5 @@ Windows X86 & X64 static library for manual mapping of arbitrary dll payloads fr
 - [ ] Security cookie initialization
 - [ ] Unloading
 
+
+© Xavier Ellis 2022; for educational purposes ONLY
