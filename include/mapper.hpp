@@ -21,6 +21,11 @@ namespace mapper
 	{
 		Unknown = 0,
 		Success,
+		Invalid_File_Path,
+		Invalid_Pe_Signature,
+		Invalid_Pe_Architecture,
+		Allocation_Failed,
+		Failed_Writing_Remote_Memory
 
 	};
 
@@ -37,17 +42,17 @@ namespace mapper
 
 	struct Mapper
 	{
-		eMapperError MAPPER_API map_ex(HANDLE process, std::string_view path, MapperHandle& out_handle, eMapperFlags flags = eMapperFlags_Default);
+		[[nodiscard]] static eMapperError MAPPER_API map_ex(HANDLE process, std::string_view path, MapperHandle& out_handle, eMapperFlags flags = eMapperFlags_Default) noexcept;
 
-		eMapperError MAPPER_API map_ex(HANDLE process, std::span<std::byte> dll, MapperHandle& out_handle, eMapperFlags flags = eMapperFlags_Default);
+		[[nodiscard]] static eMapperError MAPPER_API map_ex(HANDLE process, std::span<std::byte> dll, MapperHandle& out_handle, eMapperFlags flags = eMapperFlags_Default) noexcept;
 
-		eMapperError MAPPER_API unmap_ex(HANDLE process, MapperHandle handle);
+		[[nodiscard]] static eMapperError MAPPER_API unmap_ex(HANDLE process, MapperHandle handle) noexcept;
 
-		eMapperError MAPPER_API map(std::string_view path, MapperHandle& out_handle, eMapperFlags flags = eMapperFlags_Default);
+		[[nodiscard]] static eMapperError MAPPER_API map(std::string_view path, MapperHandle& out_handle, eMapperFlags flags = eMapperFlags_Default) noexcept;
 
-		eMapperError MAPPER_API map(std::span<std::byte> dll, MapperHandle& out_handle, eMapperFlags flags = eMapperFlags_Default);
+		[[nodiscard]] static eMapperError MAPPER_API map(std::span<std::byte> dll, MapperHandle& out_handle, eMapperFlags flags = eMapperFlags_Default) noexcept;
 
-		eMapperError MAPPER_API unmap(MapperHandle handle);
+		[[nodiscard]] static eMapperError MAPPER_API unmap(MapperHandle handle) noexcept;
 
 	};
 

@@ -12,7 +12,16 @@ project "manual-mapper-core"
 
    files { "include/*.hpp", "src/**.hpp", "src/**.cpp" }
 
-   includedirs { "include" }
+   includedirs { "include", "src" }
+
+   pchheader "src/common.hpp"
+   pchsource "src/common.cpp"
+    
+   forceincludes
+   {
+      "common.hpp"
+   }   
+
    
    filter "configurations:Debug"
       defines { "DEBUG" }
