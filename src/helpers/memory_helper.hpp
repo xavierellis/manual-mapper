@@ -1,3 +1,4 @@
+#pragma once
 namespace mapper
 {
 	struct [[nodiscard]] memory_helper
@@ -71,6 +72,12 @@ namespace mapper
 		bool deallocate(void* ptr, std::size_t size) const noexcept
 		{
 			return VirtualFreeEx(process, ptr, size, MEM_RELEASE);
+		}
+
+		bool protect(void* ptr, std::size_t size, std::uint32_t protection, std::uint32_t* old_protection) const noexcept
+		{
+			[[maybe_unused]] std::uint32_t stub{};
+			return VirtualProtectEx(process, ptr, size, protection, reinterpret_cast<PDWORD>(old_protection ? old_protection : &stub));
 		}
 
 		HANDLE process{};

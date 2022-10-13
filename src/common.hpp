@@ -1,11 +1,9 @@
 #pragma once
 
-#ifndef WIN32_LEAN_AND_MEAN
-#define WIN32_LEAN_AND_MEAN
-#endif
-
 #include <Windows.h>
 #include <winternl.h>
+#include <TlHelp32.h>
+#include <Psapi.h>
 #include <concepts>
 #include <cstdint>
 #include <vector>
@@ -13,10 +11,12 @@
 #include <string_view>
 #include <filesystem>
 #include <fstream>
-#include <assert.h>
+#include <cassert>
 #include <iterator>
 #include <algorithm>
 #include <iostream>
+
+#include "jitasm.h"
 
 namespace mapper
 {

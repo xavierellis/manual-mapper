@@ -10,7 +10,7 @@ project "manual-mapper-core"
    toolset "clang"
    targetdir "bin/%{cfg.buildcfg}"
 
-   files { "include/*.hpp", "src/**.hpp", "src/**.cpp" }
+   files { "include/*.hpp", "src/**.h", "src/**.hpp", "src/**.cpp" }
 
    includedirs { "include", "src" }
 
@@ -21,6 +21,12 @@ project "manual-mapper-core"
    {
       "common.hpp"
    }   
+
+   defines
+   {
+      "NOMINMAX",
+      "WIN32_LEAN_AND_MEAN"
+   }
 
    
    filter "configurations:Debug"

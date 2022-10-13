@@ -25,7 +25,11 @@ namespace mapper
 		Invalid_Pe_Signature,
 		Invalid_Pe_Architecture,
 		Allocation_Failed,
-		Failed_Writing_Remote_Memory
+		Failed_Writing_Remote_Memory,
+		Failed_Handling_Relocations,
+		Failed_Installing_Exception_Handlers,
+
+		Failed_Fixing_Protection,
 
 	};
 
